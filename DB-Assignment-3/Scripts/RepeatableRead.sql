@@ -1,0 +1,19 @@
+CREATE DATABASE bank11;
+USE bank11;
+
+CREATE TABLE accounts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    balance DECIMAL(10, 2)
+);
+
+INSERT INTO accounts (name, balance) VALUES
+('Alice', 890.00),
+('Bob', 345.00);
+
+
+SELECT * FROM accounts;
+SET TRANSACTION ISOLATION LEVEL REPEATABLE READ;
+START TRANSACTION;
+SELECT * FROM accounts;
+COMMIT;
