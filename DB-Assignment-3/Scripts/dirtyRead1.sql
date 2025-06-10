@@ -1,0 +1,11 @@
+USE store10;
+
+SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
+START TRANSACTION;
+
+INSERT INTO library (title, status) VALUES
+('Arch of Triumph', 'In stock'); 
+
+SELECT * FROM library;
+
+ROLLBACK;
